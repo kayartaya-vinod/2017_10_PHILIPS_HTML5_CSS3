@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>HTML5 and CSS3 demos</title>
+    <style>
+        #billy {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <hr/>
+    <video 
+        poster="./assets/images/billy.jpg"
+        muted
+        id="billy"
+        src="./assets/multimedia/billy.mp4">
+        <h3>Your browser does not support videos</h3>
+    </video>
+    <br>
+    <button id="btnPlay">Play video</button>
+    <button id="btnPause">Pause video</button>
+    <button id="btnMuteUnmute">Mute/Unmute video</button>
+
+    <script type="text/javascript">
+        var v1 = document.querySelector("#billy");
+        var b1 = document.querySelector("#btnPlay");
+        var b2 = document.querySelector("#btnPause");
+        var b3 = document.querySelector("#btnMuteUnmute");
+
+        b3.onclick = function(){
+            v1.muted = !v1.muted;
+        };
+
+        // assigning an anonymous function to the button's click event
+        b1.onclick = function (){
+            v1.play(); // builtin function in the video object
+        }
+       
+        b2.onclick = function (){
+            v1.pause(); // builtin function in the video object
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Geo Location Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+
+<body>
+    <h1>Geo Location Demo</h1>
+    <hr>
+
+    <div id="map"></div>
+
+    <script>
+        if (!navigator.geolocation) {
+            document.write("Your browser does not support HTML5 GeoLocation feature!");
+        }
+        else {
+            navigator.geolocation.getCurrentPosition(function (pos){
+                // console.log("Got this", pos.coords, "at", new Date(pos.timestamp));
+                var lat = pos.coords.latitude,
+                    lon = pos.coords.longitude;
+
+                // console.log("lat =", lat, " and lon=", lon);
+                var url = "http://maps.googleapis.com/maps/api/staticmap?size=500x400&zoom=18&sensor=false&center=" + lat + "," + lon;
+                console.log(url);
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+<!--
+
+html>(head)+(body)
+html>(head>title)+(body>h1)
+html>(head>title{})+(body>h1{}+hr)
+html>(head>title{Geo Location Demo})+(body>h1{Geo Location Demo}+hr)
+
+-->

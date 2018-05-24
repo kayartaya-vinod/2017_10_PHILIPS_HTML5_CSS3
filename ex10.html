@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>CSS3 Demos</title>
+    <style>
+        @keyframes shakeHorizontal {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-25px); }
+            75% { transform: translateX(25px); }
+            100% { transform: translateX(0); }
+        }
+
+        #d1 {
+            text-align: center;
+        }
+
+        #d1 > img:first-child:hover {
+            animation: shakeHorizontal 150ms infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 Demos</h1>
+    <hr>
+
+    <div id="d1">
+        <img src="/assets/images/cake.jpg" >
+    </div>
+
+</body>
+</html>

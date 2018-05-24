@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>CSS3 Demos</title>
+    <style>
+        #img1 {
+            transition: all 1s;
+        }
+        #img1:hover {
+            transform: translateX(200px) 
+                translateY(200px)
+                rotate(360deg);
+        }
+
+        #img2 {
+            transform: scale(1.2)
+        }
+        #img3 {
+            transition: all 1s ease-in-out;
+        }
+
+        #img3:hover {
+            transform: skewY(30deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 Demos</h1>
+    <hr>
+
+    <img src="/assets/images/tampa.jpg" id="img1">
+    <img src="/assets/images/cake.jpg" id="img2">
+    <img src="/assets/images/tampa.jpg" id="img3">
+</body>
+</html>

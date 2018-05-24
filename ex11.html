@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html manifest="ex11-manifest.cache">
+
+<head>
+    <script type="text/javascript">
+        window.applicationCache.addEventListener('updateready', function (e) {
+            if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+                window.applicationCache.swapCache();
+                if (confirm('A new version of this site is available. Load it?')) {
+                    window.location.reload();
+                }
+            }
+        }, false);
+    </script>
+    <link rel="stylesheet" href="ex11.css" type="text/css">
+    <script src="ex11.js"></script>
+</head>
+
+<body>
+    <h1>LocalStorage demo</h1>
+    <hr />
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <div>
+                <input type="text" id="name" placeholder="Enter name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <div>
+                <input type="text" id="email" placeholder="Enter email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone number</label>
+            <div>
+                <input type="text" id="phone" placeholder="Enter phone number">
+            </div>
+        </div>
+        <div class="form-group">
+            <label></label>
+            <div>
+                <button id="btnSave" type="button">Save</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- table#tbl1>(thead>tr>th*4)+(tbody) -->
+    <table id="tbl1" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Sl no.</th>
+                <th>Name</th>
+                <th>Email address</th>
+                <th>Phone number</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</body>
+
+</html>

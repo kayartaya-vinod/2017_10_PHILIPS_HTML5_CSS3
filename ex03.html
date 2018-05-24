@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>CSS3 Basics</title>
+    <style>
+        h1 {
+            color: #a00;
+        }
+
+        li:first-child {
+            border: 1px solid red;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        li:last-child {
+            border: 1px solid green;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        /* child (not descendant) "li" elements of #list1 only */
+        #list1 > li:last-child {
+            background-color: greenyellow;
+        }
+
+        li:nth-child(2) {
+            background-color: tan;
+        }
+
+        li:nth-child(even) {
+            font-size: 1.3em;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 Basics</h1>
+    <hr>
+    <ul id="list1">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3
+            <ol id="list2">
+                <li>sub list item 1</li>
+                <li>sub list item 2</li>
+                <li>sub list item 3</li>
+                <li>sub list item 4</li>
+                <li>sub list item 5</li>
+            </ol>
+        </li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+        <li>list item 6</li>
+        <li>list item 7</li>
+        <li>list item 8</li>
+        <li>list item 9</li>
+        <li>list item 10</li>
+    </ul>
+</body>
+</html>

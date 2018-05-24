@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script>
+        function log(text) {
+            var out = document.querySelector("#output");
+            out.innerHTML += text;
+            out.innerHTML += "<br />";
+        }
+        var w1 = new Worker("ex12a.js");
+        var w2 = new Worker("ex12b.js");
+
+        // posting a message to the Worker object
+        // w1.postMessage({ name: "Web Worker1" });
+        // w2.postMessage({ name: "Web Worker2" });
+        
+        // receiving a message from the Worker object
+        w1.onmessage = function (evt) {
+            // evt (the first argument) is an object representing
+            // the event information, has "data" representing the message posted
+            log("Worker#1: " + evt.data);
+        };
+
+        // using the new ES6 arrow function
+        w2.onmessage = evt => log("Worker#2: " + evt.data);
+
+    </script>
+</head>
+
+<body>
+    <h1>WebWorker demo</h1>
+    <hr />
+    <div id="output"></div>
+</body>
+
+</html>

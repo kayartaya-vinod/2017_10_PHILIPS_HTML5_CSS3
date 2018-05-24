@@ -1,0 +1,16 @@
+CACHE MANIFEST
+# Created by Vinod for Demo at Philips
+# Version 1.0.0
+
+# Any changes done to the cached resources, this file must be changed
+# Generally a version update will be done, so that the client will
+# get a notification via the window.applicationCache object
+
+
+# list of files to be cached on the client
+CACHE:
+/ex11.css
+/ex11.js
+
+NETWORK:
+/*
